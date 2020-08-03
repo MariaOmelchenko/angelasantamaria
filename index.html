@@ -10,120 +10,95 @@
 </head>
 <body>
 
-    <header class="flex items-center">
-        <div class="header">
-            <a href="#">
-                <img src="img/logo.png" alt="логотип" width="286" height="70">
+
+    <header class="header-nav flex items-center justify-between flex-wrap px-16 w-full z-10 border-b border-lightgray">
+        <div class="flex items-center flex-shrink-0 w-3/5 sm:w-auto">
+            <a href="/">
+                <img src="https://res.cloudinary.com/panda-idx/image/upload/f_auto,q_auto/v1478639606/1/users/232/4/62ba976a3a872ffa132d8f79f3584a92da49332f.png" alt="Angela Santamaria" class="jsx-1628419266 logo-img mt-px  ">
             </a>
         </div>
-
-
-        <nav class="flex menu items-center">
-
-                <div class="block cursor-pointer text-15 mr-16 font-400 hover:text-red">
-                    <div class="flex items-center">
-                        <svg viewBox="0 0 24 24" stroke="#212b36" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none" width="24" height="24" class="mr-1 stroke-current" style="margin-top: 3px;">
-                            <circle cx="12" cy="12" r="9"></circle>
-                            <path d="M12 3c-4 0-4 18 0 18s4-18 0-18"></path>
-                            <path d="M3 12c0-4 18-4 18 0S3 16 3 12"></path>
-                        </svg>
-                        <div>
-                            (
-                            <span class="uppercase">ru</span>
-                            )
+        <nav aria-label="Main" class="flex-grow lg:flex lg:items-center w-full lg:w-auto hidden ">
+            <div class="text-14 lg:flex-grow"></div>
+            <div class="block mt-16 lg:inline-block lg:mt-0 text-15 mr-16 cursor-pointer font-500 hover:text-red">
+                <div class="flex items-center -mr-16 ">
+                    <svg viewBox="0 0 24 24" stroke="#212b36" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none" width="24" height="24" class="mr-4 stroke-current" style="margin-top:3px">
+                        <circle cx="12" cy="12" r="9"></circle>
+                        <path d="M12 3c-4 0-4 18 0 18s4-18 0-18"></path>
+                        <path d="M3 12c0-4 18-4 18 0S3 16 3 12"></path>
+                    </svg>
+                        <div>(<span class="uppercase">ru</span>)
                         </div>
-                    </div>
                 </div>
-
-                <div class="menu-item relative">
-                    <button type="button">
-                        <span href="#" class="menu-item_link cursor-pointer">Поиск недвижимости</span>
-                        <svg viewBox="0 0 20 20" width="20" height="20">
-                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
+            </div>
+                <div class="flex-none hidden lg:block relative">
+                    <button type="button" class="bg-transparent text-15 font-w-200 align-middle p-16 hover:text-red">
+                        <span class="font-500 text-15 inline-block mt-px -mr-px hover:text-red">Поиск недвижимости</span> 
+                        <svg viewBox="0 0 20 20" width="20" height="20" class="inline fill-current -ml-px -mt-px">
+                            <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
                         </svg>
                     </button>
-
-                    <div class="submenu absolute">
-                        <div class="submenu-block">
-                            <div class="submenu-item"> 
-                                <a href="#" class="items-center flex cursor-pointer">Купить</a>
-                            </div>
-                            <div class="submenu-item"> 
-                                <a href="#" class="items-center flex cursor-pointer">Арендная плата</a>
-                            </div>
-                            <div class="submenu-item"> 
-                                <a href="#" class="items-center flex cursor-pointer">Поиск по области</a>
-                            </div>
-                            <div class="submenu-item"> 
-                                <a href="#" class="items-center flex cursor-pointer">Новейшие разработки</a>
-                            </div>
+                    <div class="absolute text-grey-darker bg-white z-30 -mt-2" style="border-radius:0.75rem;box-shadow:rgba(0, 0, 0, 0.15) 0px 10px 37px;transition:opacity 0.3s, margin 0.3s;animation:fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both">
+                        <div class="flex flex-col rounded  overflow-hidden whitespace-no-wrap " style="min-width:10rem">
+                            <a class="cursor-pointer hover:bg-lightgray h-40 block flex items-center text-15 px-20 font-500 text-dark" href="/search">купить</a>
+                            <a class="cursor-pointer hover:bg-lightgray h-40 block flex items-center text-15 px-20 font-500 text-dark" href="/search?type=rental">арендная плата</a>
+                            <a class="cursor-pointer hover:bg-lightgray h-40 block flex items-center text-15 px-20 font-500 text-dark" href="/areas">Поиск по области</a>
+                            <a class="cursor-pointer hover:bg-lightgray h-40 block flex items-center text-15 px-20 font-500 text-dark" href="/new-developments">Новейшие разработки</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="menu-item">
-                    <a href="#" class="menu-item_link cursor-pointer">Объявления</a>
-                    <svg viewBox="0 0 20 20" width="20" height="20">
-                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
-                    </svg>
-
-                    <div class="submenu absolute">
-                    <ul class="submenu-block">
-                        <li class="submenu-item"> 
-                            <a href="#" class="items-center flex cursor-pointer">Мои Объявления</a>
-                        </li>
-                        <li class="submenu-item"> 
-                            <a href="#" class="items-center flex cursor-pointer">Офисы</a>
-                        </li>
-                        <li class="submenu-item"> 
-                            <a href="#" class="items-center flex cursor-pointer">Вне рынка</a>
-                        </li>
-                    </ul>
-                    </div>
-
-                </div>
-
-                <a href="#" class="menu-item_link cursor-pointer">Профиль</a>
-
-                <div class="cursor-pointer">Контакт</div>
-
-                <div>|</div>
-
-                <a href="https://admin.pandaidx.com/" target="_blank" class="menu-item_link">Агентский портал</a>
-            
-                <div class="menu-button inline-block text-16 cursor-pointer hover:bg-gray-100 hover:text-gray-900">Авторизоваться</div>
+                <div class="-ml-16">
+                    <div class="flex-none hidden lg:block relative">
+                        <button type="button" class="bg-transparent text-15 font-w-200 align-middle p-16 hover:text-red">
+                            <span class="font-500 text-15 inline-block mt-px -mr-px hover:text-red">Объявления</span> 
+                            <svg viewBox="0 0 20 20" width="20" height="20" class="inline fill-current over -ml-px -mt-px ">
+                                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"></path>
+                            </svg>
+                        </button>
+                <div class="absolute text-grey-darker bg-white  z-30 -mt-2" style="border-radius:0.75rem;box-shadow:rgba(0, 0, 0, 0.15) 0px 10px 37px;transition:opacity 0.3s, margin 0.3s;animation:fade-in 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) both">
+                    <div class="flex flex-col rounded  overflow-hidden whitespace-no-wrap" style="min-width:10rem">
+                        <a class="cursor-pointer hover:bg-lightgray h-40 block flex items-center text-15 px-20 font-500 text-dark" href="/search?agent=3063476">Мои объявления</a>
+                        <a class="cursor-pointer hover:bg-lightgray h-40 block flex items-center text-15 px-20 font-500 text-dark" href="/search?brokers=3063476">Офисы</a>
+                        <a class="cursor-pointer hover:bg-lightgray h-40 block flex items-center text-15 px-20 font-500 text-dark" href="/listings">Вне рынка</a>
+                    </div></div></div></div><a class="block mt-16 lg:inline-block lg:mt-0 font-500 text-15 mr-16 hover:text-red" href="/profile">профиль</a>
+                    <div class="block mt-16 lg:inline-block lg:mt-0 text-15 mr-16 cursor-pointer font-500 hover:text-red">контакт</div>
+                    <div class="inline-block mr-16 opacity-25">|</div>
+                    <a class="block mt-16 lg:inline-block lg:mt-0 font-500 text-15 mr-16 hover:text-red" href="/how-much-is-my-home-worth">Главная Оценка</a>
+                    <div style="padding-top: 8px; padding-bottom: 9px" class="cursor-pointer inline-block text-14 px-16 line-height-1 border-button rounded-md mt-16 lg:mt-0 py-4 font-500 transition-3 text-dark hover:bg-lightgray">Авторизоваться</div>
         </nav>
-
-
     </header>
 
     <main>
-        <div class="main-search relative">
-        
-        <div class="main-search-block absolute">
-            <div class="flex items-end">
-                <div class="flex">
-                    <div class="main-search-list flex">
-                        <div class="main-search-item rounded-tl">купить</div>
-                        <div class="main-search-item">арендная плата</div>
-                        <div class="main-search-item">MLS</div>
-                        <div class="main-search-item rounded-tr">Главная Оценка</div>
+    <div class="cover-image bg-no-repeat w-full relative">
+        <div class="w-full h-full text-center absolute top-0 left-0 flex justify-center">
+            <div class="flex items-end pb-40 lg:pb-128 w-full lg:w-auto">
+                <div class="flex flex-col lg:flex-row w-full lg:w-auto">
+                    <div class="mb-16 lg:hidden">
+                        <img src="https://res.cloudinary.com/panda-idx/image/upload/f_auto,q_auto,w_500,h_500/v1590262042/1/users/232/5/faae7ae47aeba60351df7ffddf4682b376c20ac2.png" alt="Angela's Profile Image" width="150px" height="150px" class="rounded-full object-cover inline-block" style="width:150px;height:150px"></div>
+                        <div class="search-box px-16 lg:px-0 w-full ">
+                            <div class="flex rounded">
+                                <div class="flex justify-center">
+                                    <div class="px-16 lg:px-24 py-12 cursor-pointer mr-px font-500 text-white select-none bg-black rounded-tl">купить</div>
+                                    <div class="px-16 lg:px-24 py-12 cursor-pointer mr-px font-500 text-white select-none bg-semi-black undefined">арендная плата</div>
+                                    <div class="px-16 lg:px-24 py-12 cursor-pointer mr-px font-500 text-white select-none bg-semi-black undefined">MLS</div>
+                                    <div class="px-16 lg:px-24 py-12 cursor-pointer mr-px font-500 text-white select-none bg-semi-black rounded-tr ">
+                                        <p>Главная Оценка</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <form style="box-shadow:rgba(0,0,0,0.15) 0px 2px 8px" class="py-8 px-4 lg:py-12 lg:px-8 flex items-center bg-white rounded-tl-none rounded-b rounded-tr relative">
+                                <input class="block w-full text-darkgray border py-12 px-16 mb-0 mt-px bg-transparent " aria-label="Введите город, название квартиры или почтовый индекс" placeholder="Введите город, название квартиры или почтовый индекс" value="">
+                                <button type="button" aria-label="serch property" class="hover:text-teal-800 text-15 pr-20 rounded">
+                                    <svg viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" class="stroke-current text-black hover:text-gray-900 ">
+                                        <circle cx="14" cy="14" r="12"></circle>
+                                        <path d="M23 23l7 7"></path>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-
-            <form>
-                <input class="form-input" type="text" placeholder="Введите город, название квартиры или почтовый индекс">
-                <button class="form-button">
-                    <svg viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" height="24" class="stroke-current text-black hover:text-gray-900 "><circle cx="14" cy="14" r="12"></circle><path d="M23 23l7 7"></path></svg>
-                </button>
-            </form>
-            
-        </div>
-
-        <img src="https://res.cloudinary.com/panda-idx/image/upload/f_auto,q_auto/v1476826235/1/users/232/3/1471294071.jpg" alt="" class="cover-image">
-
+            <img src="https://res.cloudinary.com/panda-idx/image/upload/f_auto,q_auto/v1476826235/1/users/232/3/1471294071.jpg" alt="cover image of website" class=" h-full w-full object-cover">
         </div>
 
 
@@ -148,6 +123,13 @@
                                             </a>
                                             </div>
                                         </div>
+                                        <div class="my-12 px-16">
+                                            <p class="font-500 text-18 mb-8 text-center">Aventura</p>
+                                            <div class="text-darkgray text-center">
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?postalCodes=33180&label=Aventura">Продается</a>
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?type=rental&postalCodes=33180&label=Aventura">В Aренду</a>
+                                            </div>
+                                        </div>
                                         
                                     </div>
                                 </div>
@@ -166,7 +148,13 @@
                                             </a>
                                             </div>
                                         </div>
-                                        
+                                            <div class="my-12 px-16">
+                                                <p class="font-500 text-18 mb-8 text-center">Sunny Isles</p>
+                                                <div class="text-darkgray text-center">
+                                                    <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?postalCodes=33180&label=Aventura">Продается</a>
+                                                    <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?type=rental&postalCodes=33180&label=Aventura">В Aренду</a>
+                                                </div>
+                                            </div>
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +172,13 @@
                                             </a>
                                             </div>
                                         </div>
-                                        
+                                        <div class="my-12 px-16">
+                                            <p class="font-500 text-18 mb-8 text-center">Bal Harbour</p>
+                                            <div class="text-darkgray text-center">
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?postalCodes=33180&label=Aventura">Продается</a>
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?type=rental&postalCodes=33180&label=Aventura">В Aренду</a>
+                                            </div>
+                                        </div>                                        
                                     </div>
                                 </div>
                             </div>
@@ -202,7 +196,13 @@
                                             </a>
                                             </div>
                                         </div>
-                                        
+                                        <div class="my-12 px-16">
+                                            <p class="font-500 text-18 mb-8 text-center">Bay Harbor Islands</p>
+                                            <div class="text-darkgray text-center">
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?postalCodes=33180&label=Aventura">Продается</a>
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?type=rental&postalCodes=33180&label=Aventura">В Aренду</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -220,7 +220,13 @@
                                             </a>
                                             </div>
                                         </div>
-                                        
+                                        <div class="my-12 px-16">
+                                            <p class="font-500 text-18 mb-8 text-center">Surfside</p>
+                                            <div class="text-darkgray text-center">
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?postalCodes=33180&label=Aventura">Продается</a>
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?type=rental&postalCodes=33180&label=Aventura">В Aренду</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -238,7 +244,13 @@
                                             </a>
                                             </div>
                                         </div>
-                                        
+                                        <div class="my-12 px-16">
+                                            <p class="font-500 text-18 mb-8 text-center">Miami</p>
+                                            <div class="text-darkgray text-center">
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?postalCodes=33180&label=Aventura">Продается</a>
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?type=rental&postalCodes=33180&label=Aventura">В Aренду</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -256,7 +268,13 @@
                                             </a>
                                             </div>
                                         </div>
-                                        
+                                        <div class="my-12 px-16">
+                                            <p class="font-500 text-18 mb-8 text-center">South Beach</p>
+                                            <div class="text-darkgray text-center">
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?postalCodes=33180&label=Aventura">Продается</a>
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?type=rental&postalCodes=33180&label=Aventura">В Aренду</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -274,14 +292,27 @@
                                             </a>
                                             </div>
                                         </div>
-                                        
+                                        <div class="my-12 px-16">
+                                            <p class="font-500 text-18 mb-8 text-center">Doral</p>
+                                            <div class="text-darkgray text-center">
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?postalCodes=33180&label=Aventura">Продается</a>
+                                                <a class="hover:underline mx-8" href="https://www.angelasantamaria.net/search?type=rental&postalCodes=33180&label=Aventura">В Aренду</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <a href="#">смотреть все области</a>
+                <a href="/new-developments">
+                    <button class="rounded-8 flex underline font-500 items-center tracking-wide bg-transparent hover:bg-lightgray pr-4 py-8 transition-3 transition-3-hover:hover">
+                        <span class="-mt-px">СМОТРЕТЬ ВСЕ ОБЛАСТИ</span>
+                        <svg width="26" height="26" viewBox="0 0 24 24">
+                            <path d="M9.29 15.88L13.17 12 9.29 8.12a.996.996 0 111.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 01-1.41 0c-.38-.39-.39-1.03 0-1.42z"></path>
+                        </svg>
+                    </button>
+                </a>
             </div>
         </section>
 
@@ -498,7 +529,14 @@
                         </div>
                     </div>
                 </div>
-                <a href="">смотреть все области</a>
+                <a href="/new-developments">
+                    <button class="rounded-8 flex underline font-500 items-center tracking-wide bg-transparent hover:bg-lightgray pr-4 py-8 transition-3 transition-3-hover:hover">
+                        <span class="-mt-px">СМОТРЕТЬ ВСЕ ПРОЕКТЫ</span>
+                        <svg width="26" height="26" viewBox="0 0 24 24">
+                            <path d="M9.29 15.88L13.17 12 9.29 8.12a.996.996 0 111.41-1.41l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3a.996.996 0 01-1.41 0c-.38-.39-.39-1.03 0-1.42z"></path>
+                        </svg>
+                    </button>
+                </a>
             </div>
         </section>
 
@@ -561,10 +599,127 @@
 
 
     <footer>
-        <div></div>
-        <section></section>
-        <div></div>
-        <section></section>
+        <div>
+            <div class="hidden lg:block">
+                <div class="container mx-auto px-16 xl:px-0">
+                    <div class="w-full border-b"></div>
+                </div>
+            </div>
+            <div class="w-full border-b lg:hidden"></div>
+        </div>
+        <section class="my-32 lg:my-48">
+            <div class="container mx-auto px-4 xl:px-0">
+                <div class="flex flex-wrap">
+                    <div class="w-1/2 lg:w-1/4 mb-32 lg:mb-0 pr-20">
+                        <h4 class="tracking-wide uppercase font-500 text-14 mb-16">Angela Santamaria</h4>
+                        <p class="text-dark text-14 pt-8 mb-12">
+                            <a href="mailto:angela@angelasantamaria.net">angela@angelasantamaria.net</a>
+                        </p>
+                        <p class="text-dark text-14 mb-4">
+                            <a href="https://www.angelasantamaria.net/tel:(786)%20210%206565">(786) 210 6565</a>
+                        </p>
+                        <h4 class="tracking-wide uppercase font-500 text-14 mb-16 mt-24">Эксклюзивный агент для</h4>
+                        <p class="text-dark text-14 mb-16 -mt-4">Dezer Platinum Realty</p>
+                        <img src="https://res.cloudinary.com/panda-idx/image/upload/w_172,h_55/v1501788372/0/boards/mls_logo_dark.png" alt="mls compliance logo">                   
+                    </div>
+                    <div class="w-1/2 lg:w-1/4 mb-32 lg:mb-0">
+                        <h4 class="tracking-wide uppercase font-500 text-14 mb-16">Рекомендуемые районы</h4>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full" href="https://www.angelasantamaria.net/search?postalCodes=33180&label=Aventura">
+                            <p>Aventura</p>
+                        </a>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full" href="https://www.angelasantamaria.net/search?postalCodes=33160&label=Sunny%20Isles">
+                            <p>Sunny Isles</p>
+                        </a>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full" href="https://www.angelasantamaria.net/search?postalCodes=33154&label=Bal%20Harbour">
+                            <p>Bal Harbour</p>
+                        </a>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full" href="https://www.angelasantamaria.net/search?postalCodes=33154&label=Bay%20Harbor%20Islands">
+                            <p>Bay Harbor Islands</p>
+                        </a>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full" href="https://www.angelasantamaria.net/search?postalCodes=33154&label=Surfside">
+                            <p>Surfside</p>
+                        </a>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full underline" href="https://www.angelasantamaria.net/areas">
+                            <p>Показать все районы</p>
+                        </a>
+                    </div>
+                    <div class="w-1/2 lg:w-1/4 mb-32">
+                        <h4 class="tracking-wide uppercase font-500 text-14 mb-16">Новые разработки</h4>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full" href="https://www.angelasantamaria.net/new-development/81/17885-collins-ave-sunny-isles-beach-fl-33160-usa">
+                            <p>Estates at Acqualina</p>
+                        </a>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full" href="https://www.angelasantamaria.net/new-development/83/18975-collins-ave-sunny-isles-beach-fl-33160-usa">
+                            <p>Armani Residences</p>
+                        </a>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full" href="https://www.angelasantamaria.net/new-development/84/10201-collins-ave-bal-harbour-fl-33154-usa">
+                            <p>Oceana Bal Harbour</p>
+                        </a>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full" href="https://www.angelasantamaria.net/new-development/85/18501-collins-ave-sunny-isles-beach-fl-33160-usa">
+                            <p>Turnberry Ocean Club</p>
+                        </a>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full" href="https://www.angelasantamaria.net/new-development/88/300-biscayne-blvd-way-miami-fl-33132-usa">
+                            <p>Aston Martin</p>
+                        </a>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full underline" href="https://www.angelasantamaria.net/new-developments">
+                            <p>Показать все проекты</p>
+                        </a>
+                    </div>
+                    <div class="w-1/2 lg:w-1/4 mb-32">
+                        <h4 class="tracking-wide uppercase font-500 text-14 mb-16">Последние новости</h4>
+                        <a class="mt-8 text-dark text-14 hover:underline inline-block w-full underline" href="https://www.angelasantamaria.net/blog">
+                            <p>Показать все сообщения</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div>
+            <div class="hidden lg:block">
+                <div class="container mx-auto px-16 xl:px-0">
+                    <div class="w-full border-b"></div>
+                </div>
+            </div>
+            <div class="w-full border-b lg:hidden"></div>
+        </div>
+        <section class="my-24">
+            <div class="container mx-auto px-4 xl:px-0">
+                <div class="flex flex-wrap items-center justify-center flex-col-reverse lg:flex-row lg:justify-between">
+                    <div class="w-full lg:w-2/3 flex  flex-col-reverse lg:flex-row ">
+                        <div class="w-full lg:w-auto text-14 text-center lg:text-left text-dark tracking-wide px-32 lg:px-0 ">
+                            &copy;2020
+                            <a class="hover:underline" href="https://www.pandaidx.com" target="_blank" title="Panda IDX v3.1.2">by Panda IDX</a>
+                        </div>
+                        <div class="w-full lg:w-auto text-14 text-center lg:text-left text-dark tracking-wide px-32 lg:px-0">
+                            <div class="hidden lg:inline">
+                                <span class="inline-block px-8 text-dark">·</span>
+                            </div>
+                            <a target="_blank" href="https://www.pandaidx.com/privacy" class="hover:underline">Конфиденциальность</a>
+                            <span class="inline-block px-8 text-dark">·</span>
+                            <a target="_blank" href="https://www.pandaidx.com/terms" class="hover:underline">термины</a>
+                            <span class="inline-block px-8 text-dark">·</span>
+                            <a class="hover:underline" href="/accessibility">доступность</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center mb-8 lg:mb-0">
+                        <a href="https://www.facebook.com/Angela-Santamaria-537943092890251/?fref=ts" target="_blank" class="mx-8 lg:ml-4 text-dark">
+                            <svg viewBox="0 0 512 512" width="18" height="18" class="fill-current">
+                                <path d="M288 176v-64c0-17.664 14.336-32 32-32h32V0h-64c-53.024 0-96 42.976-96 96v80h-64v80h64v256h96V256h64l32-80h-96z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/FortuneRealty" target="_blank" class="mx-8 lg:ml-4 text-dark">
+                            <svg viewBox="0 0 512 512" width="18" height="18" class="fill-current">
+                                <path d="M512 97.248c-19.04 8.352-39.328 13.888-60.48 16.576 21.76-12.992 38.368-33.408 46.176-58.016-20.288 12.096-42.688 20.64-66.56 25.408C411.872 60.704 384.416 48 354.464 48c-58.112 0-104.896 47.168-104.896 104.992 0 8.32.704 16.32 2.432 23.936-87.264-4.256-164.48-46.08-216.352-109.792-9.056 15.712-14.368 33.696-14.368 53.056 0 36.352 18.72 68.576 46.624 87.232-16.864-.32-33.408-5.216-47.424-12.928v1.152c0 51.008 36.384 93.376 84.096 103.136-8.544 2.336-17.856 3.456-27.52 3.456-6.72 0-13.504-.384-19.872-1.792 13.6 41.568 52.192 72.128 98.08 73.12-35.712 27.936-81.056 44.768-130.144 44.768-8.608 0-16.864-.384-25.12-1.44C46.496 446.88 101.6 464 161.024 464c193.152 0 298.752-160 298.752-298.688 0-4.64-.16-9.12-.384-13.568 20.832-14.784 38.336-33.248 52.608-54.496z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/feed/my_videos" target="_blank" class="mx-8 lg:ml-4 text-dark">
+                            <svg viewBox="0 0 512 512" width="18" height="18" class="fill-current">
+                                <path d="M490.24 113.92c-13.888-24.704-28.96-29.248-59.648-30.976C399.936 80.864 322.848 80 256.064 80c-66.912 0-144.032.864-174.656 2.912-30.624 1.76-45.728 6.272-59.744 31.008C7.36 138.592 0 181.088 0 255.904v.256c0 74.496 7.36 117.312 21.664 141.728 14.016 24.704 29.088 29.184 59.712 31.264C112.032 430.944 189.152 432 256.064 432c66.784 0 143.872-1.056 174.56-2.816 30.688-2.08 45.76-6.56 59.648-31.264C504.704 373.504 512 330.688 512 256.192v-.16-.096c0-74.848-7.296-117.344-21.76-142.016zM192 352V160l160 96-160 96z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </footer>
    
 </body>
